@@ -6,7 +6,7 @@
 
 取得後はEnvironmentVariablesのtokenに設定して下さい。
 
-[Download](https://github.com/hirosan18/alfred3-codic-workflow/releases)
+[Download](https://github.com/hirosan18/alfred3-codic-workflow/releases/download/1.0/codic.alfredworkflow)
 
 ## アクセストークンの設定
 
