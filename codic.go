@@ -10,6 +10,7 @@ import (
     "fmt"
     "errors"
     "github.com/deanishe/awgo"
+    "golang.org/x/text/unicode/norm"
 )
 
 type Result struct {
@@ -22,7 +23,6 @@ var (
     endpoint    = "https://api.codic.jp/v1/engine/translate.json"
     wf          *aw.Workflow
 )
-
 
 func init() {
     wf = aw.New()
@@ -37,7 +37,7 @@ func run() {
     var casing string
 
     if args := wf.Args(); len(args) > 1 {
-        text            = args[0]
+        text            = norm.NFC.String(args[0])
         token           = args[1]
         project_id      = args[2]
         acronym_style   = args[3]
